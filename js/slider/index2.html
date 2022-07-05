@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="flex justify-center">
+        <div class="flex items-center">
+            <button class="bg-blue-400 text-white px-6 py-2" id="prevBtn">Previous</button>
+            <img style="width:400px" src="./image/rabbi.jpg" alt="">
+            <button class="bg-blue-400 text-white px-6 py-2" id="nextvBtn">Next</button>
+        </div>
+    </div>
+
+    <script>
+        let prevBtn = document.getElementById('prevBtn');
+        let nextBtn = document.getElementById('nextvBtn');
+        let img = document.querySelector('img');
+        let count = 0;
+        let pic = ['./image/rabbi.jpg','./image/Rana.jpg','./image/zahid.jpg',]
+
+        prevBtn.addEventListener('click', function(){
+            count--;
+            count = count < 0 ? pic.length - 1 : count;
+            img.src = pic[count];
+
+        });
+        nextBtn.addEventListener('click', function(){
+            count++;
+            count = count < pic.length ? count : 0
+            img.src = pic[count];
+        })
+    </script>
+</body>
+</html>

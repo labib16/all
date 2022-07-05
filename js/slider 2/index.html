@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+   <div class="" style="display: flex; align-items: center; margin-top: 10px;">
+        <div class="box" style="background-color: red; border-radius: 10px; width: 100px; margin-left: 10px; cursor: pointer; display: flex; align-items: center; justify-content: center; height: 100px;"></div>
+        <div class="box" style="background-color: red; border-radius: 10px; width: 100px; margin-left: 10px; cursor: pointer; display: flex; align-items: center; justify-content: center; height: 100px;"></div>
+        <div class="box" style="background-color: red; border-radius: 10px; width: 100px; margin-left: 10px; cursor: pointer; display: flex; align-items: center; justify-content: center; height: 100px;"></div>
+   </div>
+   <div class="" style="display: flex; align-items: center; margin-top: 10px;">
+        <div class="box" style="background-color: red; border-radius: 10px; width: 100px; margin-left: 10px; cursor: pointer; display: flex; align-items: center; justify-content: center; height: 100px;"></div>
+        <div class="box" style="background-color: red; border-radius: 10px; width: 100px; margin-left: 10px; cursor: pointer; display: flex; align-items: center; justify-content: center; height: 100px;"></div>
+        <div class="box" style="background-color: red; border-radius: 10px; width: 100px; margin-left: 10px; cursor: pointer; display: flex; align-items: center; justify-content: center; height: 100px;"></div>
+   </div>
+   <div class="" style="display: flex; align-items: center; margin-top: 10px;">
+        <div class="box" style="background-color: red; border-radius: 10px; width: 100px; margin-left: 10px; cursor: pointer; display: flex; align-items: center; justify-content: center; height: 100px;"></div>
+        <div class="box" style="background-color: red; border-radius: 10px; width: 100px; margin-left: 10px; cursor: pointer; display: flex; align-items: center; justify-content: center; height: 100px;"></div>
+        <div class="box" style="background-color: red; border-radius: 10px; width: 100px; margin-left: 10px; cursor: pointer; display: flex; align-items: center; justify-content: center; height: 100px;"></div>
+   </div>
+   <div class="rest" style="margin-top: 20px;">
+        <button>Restart Game</button>
+        <p>Winner Is : <span class="win"></span></p>
+   </div>
+</body>
+<script>
+    let allBox = document.querySelectorAll('.box');
+    let rest = document.querySelector('.rest');
+    let wintext = document.querySelector('.win');
+    let sign = 'X'
+    allBox.forEach(function(element,index){
+        element.addEventListener('click', function(){
+           element.innerHTML = sign;
+           if(sign == 'X'){
+            sign = 'O'
+           }else{
+                sign = 'X'
+           }
+           boxIndex(0,1,2)
+           boxIndex(3,4,5)
+           boxIndex(6,7,8)
+           boxIndex(0,3,6)
+           boxIndex(1,4,7)
+           boxIndex(7,5,8)
+           boxIndex(0,4,8)
+           boxIndex(7,4,6)
+        })
+    })
+    
+    function boxIndex(num1,num2,num3){
+       if(allBox[num1].innerHTML != '' && allBox[num2].innerHTML != '' && allBox[num3].innerHTML != ''
+       && allBox[num1].innerHTML == allBox[num2].innerHTML 
+        &&  allBox[num2].innerHTML == allBox[num3].innerHTML
+       ){
+        //    alert('Win' + allBox[num1].innerHTML)
+           wintext.innerHTML = allBox[num1].innerHTML;
+       }
+    }
+     rest.addEventListener('click', function(){
+            for(let i = 0; i < allBox.length; i++){
+                allBox[i].innerHTML = ''
+            }
+        })
+</script>
+</html>

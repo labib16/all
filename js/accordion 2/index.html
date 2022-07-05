@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="tailwind.css">
+</head>
+<body>
+    <div>
+        <div class="container mx-auto px-4">
+            <div class="row">
+                <div class="w-full px-4">
+                    <div class="accordionHead border p-3 cursor-pointer">Section 1</div>
+                    <div class="accordionBody border p-3 hidden">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur tempore ipsa quidem provident suscipit doloribus facere amet aut quam voluptatem, mollitia corporis. Maxime animi nulla repudiandae, quis eius facilis qui?
+                    </div>
+                </div>
+                <div class="w-full px-4">
+                    <div class="accordionHead border p-3 cursor-pointer">Section 2</div>
+                    <div class="accordionBody border p-3 hidden">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur tempore ipsa quidem provident suscipit doloribus facere amet aut quam voluptatem, mollitia corporis. Maxime animi nulla repudiandae, quis eius facilis qui?
+                    </div>
+                </div>
+                <div class="w-full px-4">
+                    <div class="accordionHead border p-3 cursor-pointer">Section 3</div>
+                    <div class="accordionBody border p-3 hidden">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur tempore ipsa quidem provident suscipit doloribus facere amet aut quam voluptatem, mollitia corporis. Maxime animi nulla repudiandae, quis eius facilis qui?
+                    </div>
+                </div>
+                <div class="w-full px-4">
+                    <input class="fixed top-20 w-full" type="range" name="" id="rng" value="20">
+                </div>
+                <div class="w-full h-screen bg-red-500">
+                    <p>Sec 1</p>
+                </div>
+                <div class="w-full h-screen bg-green-500">
+                    <p>Sec 2</p>
+                </div>
+                <div class="w-full h-screen bg-blue-500">
+                    <p>Sec 3</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let accordionBody = document.querySelectorAll('.accordionBody');
+        let accordionHead = document.querySelectorAll('.accordionHead');
+        let rngTag = document.getElementById('rng');
+        
+        accordionHead.forEach(function(ele,id){
+            ele.addEventListener('click', function(){
+                accordionBody[id].classList.toggle('hidden')
+                console.log(id);
+                if(id == 0){
+                accordionBody[1].classList.add('hidden');
+                accordionBody[2].classList.add('hidden');
+                };
+                if(id == 1){
+                    accordionBody[0].classList.add('hidden');
+                    accordionBody[2].classList.add('hidden');
+                };
+                if(id == 2){
+                    accordionBody[1].classList.add('hidden');
+                    accordionBody[0].classList.add('hidden');
+                };
+                });
+            
+        })
+    </script>
+</body>
+</html>

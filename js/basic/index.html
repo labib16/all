@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <p>Basic Javascript</p>
+</head>
+<body>
+    <div>
+        <p class="demo">00</p>
+        <p class="sec">00</p>
+        <p class="min">00</p>
+        <p class="rest">rest</p>
+        <p class="stop">stop</p>
+    </div>
+
+    <script>
+        let demo = document.querySelector('.demo')
+        let rest = document.querySelector('.rest')
+        let sec = document.querySelector('.sec')
+        let min = document.querySelector('.min')
+        let stop = document.querySelector('.stop')
+        setInterval(intervel,10)
+        function intervel(){
+            demo.innerHTML++
+            if(demo.innerHTML == 100){
+                sec.innerHTML++
+                demo.innerHTML = 0
+                if(sec.innerHTML >= 60){
+                    min.innerHTML++
+                    sec.innerHTML =  0
+                }
+                
+            }
+        }
+        stop.addEventlistener('click', function(){
+            clearInterval(intervel())
+        })
+        
+    </script>
+</body>
+</html>

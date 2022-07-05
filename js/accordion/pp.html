@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discount Calculator</title>
+    <link rel="stylesheet" href="tailwind.css">
+</head>
+<body class="bg-gray-200">
+    <div>
+        <div class="container mx-auto px-4">
+            <div class="row">
+                <div class="w-96 h-64 p-4 bg-white rounded">
+                    <div class="">
+                        <p class=" text-center text-xl font-semibold">Discount Calculator</p>
+                        <input class="outline-none amount border w-full border-black py-1 px-2 rounded" placeholder="Amount" type="text" name="" id=""> <br>
+                        <input class="w-full range" type="range" name="" id="">
+                        <div class="flex items-center space-x-2">
+                            <p>Discount Percent :</p>
+                            <p class="rngeValue"></p>
+                        </div>
+                    </div>
+                    <div class="py-2">
+                        <p class=" text-center">Result</p>
+                        <div class="flex items-center space-x-2">
+                            <p>Discount Amount :</p>
+                            <p class="tip"></p>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <p>Total After Discount :</p>
+                            <p class="total"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script !src="">
+        class tipCalculator{
+            constructor(){
+                this.declarevariable();
+                this.initialization();
+            }
+            declarevariable(){
+                this.amount = document.querySelector('.amount');
+                this.range = document.querySelector('.range');
+                this.rngeValue = document.querySelector('.rngeValue');
+                this.tip = document.querySelector('.tip');
+                this.total = document.querySelector('.total');
+
+            }
+            initialization(){
+                let $this = this;
+                $this.range.addEventListener('click', function(){
+                    $this.rngeValue.innerHTML = $this.range.value + '%'
+                    let cal = $this.amount.value *  $this.range.value/100;
+                    $this.tip.innerHTML = cal;
+                    let htmlToInt = parseInt($this.tip.innerHTML)
+                    $this.total.innerHTML = $this.amount.value - htmlToInt;
+                })
+            }
+        }
+        let a = new tipCalculator();
+    </script>
+</body>
+</html>

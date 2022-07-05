@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="tailwind.css">
+</head>
+<body>
+    <div>
+        <div class="container mx-auto px-4">
+            <div class="row">
+                <div class="w-1/3 px-4">
+                    <div class="flex items-center justify-around">
+                        <div>
+                            <div class="cursor-pointer z-50 ship transform transition-all duration-700" style="background-image: url(./image/goat.png); height: 60px; width: 60px; background-size: cover; background-position: center;"></div>
+                            <div class="cursor-pointer z-50 ship transform transition-all duration-700" style="background-image: url(./image/goat.png); height: 60px; width: 60px; background-size: cover; background-position: center;"></div>
+                            <div class="cursor-pointer z-50 ship transform transition-all duration-700" style="background-image: url(./image/goat.png); height: 60px; width: 60px; background-size: cover; background-position: center;"></div>
+                        </div>
+                        <div>
+                            <div class="cursor-pointer z-50 wolf transform transition-all duration-700" style="background-image: url(./image/wolf.png); height: 60px; width: 60px; background-size: cover; background-position: center;"></div>
+                            <div class="cursor-pointer z-50 wolf transform transition-all duration-700" style="background-image: url(./image/wolf.png); height: 60px; width: 60px; background-size: cover; background-position: center;"></div>
+                            <div class="cursor-pointer z-50 wolf transform transition-all duration-700" style="background-image: url(./image/wolf.png); height: 60px; width: 60px; background-size: cover; background-position: center;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div style="" class="w-1/3 px-4">
+                    <div class="w-full h-screen bg-blue-400 flex justify-between z-0">
+                        <div id="boat1" class=" boat" style="background-image: url(./image/boat.png); height: 300px; width: 130px; background-size: cover; background-position: center;">
+                            
+                        </div>
+                        <div id="boat2" class="hidden boat" style="background-image: url(./image/boat.png); height: 300px; width: 130px; background-size: cover; background-position: center;">
+                            <div class="cursor-pointer ship transform translate-x-10 transition-all duration-700" style="background-image: url(./image/goat.png); height: 60px; width: 60px; background-size: cover; background-position: center;"></div>
+                            <div class="cursor-pointer wolf transform translate-x-8 transition-all duration-700" style="background-image: url(./image/wolf.png); height: 60px; width: 60px; background-size: cover; background-position: center;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let ship = document.querySelectorAll('.ship');
+        let wolf = document.querySelectorAll('.wolf');
+        let boat1 = document.getElementById('boat1');
+        let boat2 = document.getElementById('boat2');
+        ship.forEach(function(x,y){
+            x.addEventListener('click', function(){
+                x.classList.add('translate-x-96');
+                
+            })
+        })
+        wolf.forEach(function(x,y){
+            x.addEventListener('click', function(){
+                x.classList.add('translate-x-48');
+                
+            })
+        })
+       boat1.addEventListener('click', function(){
+           
+       })
+    </script>
+</body>
+</html>

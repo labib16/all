@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../dist/style.css">
+</head>
+<body>
+    <div class="">
+        <div class="container mx-auto px-4">
+            <div class="row">
+                <div class="flex justify-center w-full h-screen items-center">
+                    <div class="px-4 space-y-0.5">
+                        <p class="text-center text-4xl font-bold pb-5 text-blue-500 t">TIC TAC TOE</p>
+                        <p class="text-center text-3xl font-bold pb-5 text-blue-400">Using Javascript</p>
+                        <div class="flex items-center space-x-0.5">
+                            <div class="bg-gray-400 text-white w-28 h-28 rounded-md flex items-center justify-center box cursor-pointer text-4xl"></div>
+                            <div class="bg-gray-400 text-white w-28 h-28 rounded-md flex items-center justify-center box cursor-pointer text-4xl"></div>
+                            <div class="bg-gray-400 text-white w-28 h-28 rounded-md flex items-center justify-center box cursor-pointer text-4xl"></div>
+                        </div>
+                        <div class="flex items-center space-x-0.5">
+                            <div class="bg-gray-400 text-white w-28 h-28 rounded-md flex items-center justify-center box cursor-pointer text-4xl"></div>
+                            <div class="bg-gray-400 text-white w-28 h-28 rounded-md flex items-center justify-center box cursor-pointer text-4xl"></div>
+                            <div class="bg-gray-400 text-white w-28 h-28 rounded-md flex items-center justify-center box cursor-pointer text-4xl"></div>
+                        </div>
+                        <div class="flex items-center space-x-0.5">
+                            <div class="bg-gray-400 text-white w-28 h-28 rounded-md flex items-center justify-center box cursor-pointer text-4xl"></div>
+                            <div class="bg-gray-400 text-white w-28 h-28 rounded-md flex items-center justify-center box cursor-pointer text-4xl"></div>
+                            <div class="bg-gray-400 text-white w-28 h-28 rounded-md flex items-center justify-center box cursor-pointer text-4xl"></div>
+                        </div>
+                        <div class="flex justify-center pt-7">
+                            <button id="restart" class="bg-green-400 text-white px-14 py-5">Restart</button>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-2xl font-semibold text-green-500">Winner Is : <span class="text-2xl font-semibold text-red-500" id="result"></span></p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let box = document.querySelectorAll('.box');
+        let sign = 'X';
+        let restBtn = document.getElementById('restart');
+        let resultScreen = document.getElementById('result');
+        box.forEach((element,index)=>{
+            element.addEventListener('click', ()=>{
+                box[index].innerHTML = sign;
+                if(sign == 'X'){
+                    sign = 'O'
+                }else{
+                    sign = 'X'
+                }
+
+                boxIndex(0,1,2)
+                boxIndex(3,4,5)
+                boxIndex(6,7,8)
+                boxIndex(0,3,6)
+                boxIndex(1,4,7)
+                boxIndex(7,5,8)
+                boxIndex(0,4,8)
+                boxIndex(7,4,6)
+            })
+        }) 
+        function boxIndex(id1,id2,id3){
+            if(box[id1].innerHTML != '' &&
+               box[id2].innerHTML != '' &&
+               box[id3].innerHTML != '' &&
+               box[id1].innerHTML == box[id2].innerHTML &&
+               box[id2].innerHTML == box[id3].innerHTML
+             ){
+                 resultScreen.innerHTML = box[id1].innerHTML
+
+             }
+
+            restBtn.addEventListener('click',()=>{
+            box[id1].innerHTML = ""
+            box[id2].innerHTML = ""
+            box[id3].innerHTML = ""
+            resultScreen.innerHTML = ''
+        })
+        }
+        
+    </script>
+    <script>
+        let textt = document.querySelector('.t')
+        textt.addEventListener('click', function(event){
+            console.log(event.target.parentNode);
+        })
+    </script>
+    <script>
+        // class ticTaciToe{
+        //     constructor(option){
+        //         this.option = {};
+        //         this.option.box = option.box ? option.box : '.box'; 
+        //         this.option.sign = option.sign ? option.sign : 'X';
+        //         this.option.restBtn = option.restBtn ? option.restBtn : 'restart';
+        //         this.option.screen = option.screen ? option.screen : 'result';
+        //         this.initialization();
+        //     }
+        //     initialization(){
+        //         let box = document.querySelectorAll(this.option.box);
+        //         let sign = this.option.sign;
+        //         let restBtn = document.getElementById(this.option.restBtn)
+        //         let screen = document.getElementById(this.option.screen)
+                
+        //         box.forEach((element,index)=>{
+        //             element.addEventListener('click',()=>{
+        //                 box[index].innerHTML = sign;
+
+        //                 if(sign == 'X'){
+        //                     sign = 'O'
+        //                 }else{
+        //                     sign = 'X'
+        //                 }
+        //                 boxIndex(0,1,2),boxIndex(3,4,5),boxIndex(6,7,8),
+        //                 boxIndex(0,3,6),boxIndex(1,4,7),boxIndex(7,5,8),
+        //                 boxIndex(0,4,8),boxIndex(7,4,6),boxIndex(2,4,6)
+        //             })
+        //            function boxIndex(num1,num2,num3){
+        //             if( box[num1].innerHTML != '' &&
+        //                 box[num2].innerHTML != '' &&
+        //                 box[num3].innerHTML != '' &&
+        //                 box[num1].innerHTML == box[num2].innerHTML &&
+        //                 box[num2].innerHTML == box[num3].innerHTML
+                    
+        //                 ){
+        //                     screen.innerText = box[num1].innerHTML
+        //                 }
+        //                 restBtn.addEventListener('click', function(){
+        //                     box[num1].innerHTML = ''
+        //                     box[num2].innerHTML = ''
+        //                     box[num3].innerHTML = ''
+        //                     screen.innerHTML = ''
+        //                 })
+        //             }
+                        
+        //         })
+                
+        //     }
+            
+        // }
+
+        // let game = new ticTaciToe({})
+    </script>
+</body>
+</html>

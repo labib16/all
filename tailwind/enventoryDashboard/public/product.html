@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../dist/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+</head>
+<body style="font-family: 'Poppins', sans-serif">
+    <!-- Navbar -->
+        <div class=" shadow-lg">
+            <div class="mx-auto px-4">
+                <div class="row">
+                    <div class="w-1/5 lNav flex items-center duration-500 z-0">
+                        <div class="flex items-center space-x-3">
+                            <img src="../src/assets/images/Icon.svg" alt="">
+                            <p class=" text-3xl font-semibold logoText duration-500">enventory</p>
+                        </div>
+                    </div>
+                    <div class="w-4/5 rNav px-4 flex items-center justify-between duration-500 z-50">
+                        <div>
+                            <img class=" cursor-pointer menu" src="../src/assets/images/menu.svg" alt="">
+                        </div>
+                        <div class="flex items-center justify-end space-x-10">
+                            <div>
+                                <button class=" bg-[#501CD8] text-white px-8 rounded-full">POS</button>
+                            </div>
+                            <div>
+                            <select class="px-5 outline-none py-1 bg-transparent border border-black rounded-full" name="" id="">
+                                <option value="Warehouse">Warehouse</option>
+                                <option value="Warehouse">Warehouse 1</option>
+                                <option value="Warehouse">Warehouse 2</option>
+                            </select>
+                            </div>
+                            <div>
+                            <select class=" py-2 px-2 rounded-md bg-transparent outline-none" name="countries">
+                                <option value="NL">🇳🇱</option>
+                                <option value="DE">🇩🇪</option>
+                                <option value="FR">🇫🇷</option>
+                                <option value="ES">🇪🇸</option>
+                            </select>
+                            </div>
+                            <div class=" relative">
+                                <img src="../src/assets/images/bell.svg" alt="">
+                                <div class=" w-5 h-5 absolute -top-1 transform translate-x-4 bg-red-500 rounded-full text-white flex items-center justify-center">
+                                    <p>2</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <img src="../src/assets/images/user.svg" class=" rounded-full" alt="">
+                                <div>
+                                <select class=" outline-none bg-transparent text-lg font-semibold" name="" id="">
+                                    <option value="">Stephan Austin</option>
+                                    <option value="">Stephan Austin</option>
+                                    <option value="">Stephan Austin</option>
+                                </select>
+                                <p class=" text-sm ml-1">Chief Manager</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- Navbar -->
+    <!-- Banner Start -->
+        <div>
+            <div class="mx-auto">
+                <div class="row">
+                    <div class="w-1/5 bg-[#262F3C] left duration-500">
+                        <div class="px-4">
+                            <div>
+                                <ul>
+                                    <li class="hover:bg-[#6B788E] -mx-4 duration-300">
+                                        <a class=" flex items-center space-x-8 p-4 text-white" href="index.html">
+                                            <img class=" w-7 h-7" src="../src/assets/images/s1.svg" alt="">
+                                            <p class="menuItem">Dashboard</p>
+                                        </a>
+                                    </li>
+                                    <li class="hover:bg-[#6B788E] -mx-4 duration-300">
+                                        <a class=" flex items-center space-x-8 p-4 text-white" href="product.html">
+                                            <img class=" w-7 h-7" src="../src/assets/images/s2.svg" alt="">
+                                            <p class="menuItem">Products</p>
+                                        </a>
+                                    </li>
+                                    <li class="hover:bg-[#6B788E] -mx-4 duration-300">
+                                        <a class=" flex items-center space-x-8 p-4 text-white" href="">
+                                            <img class=" w-7 h-7" src="../src/assets/images/s3.svg" alt="">
+                                            <p class="menuItem">Adjustment</p>
+                                        </a>
+                                    </li>
+                                    <li class="hover:bg-[#6B788E] -mx-4 duration-300">
+                                        <a class=" flex items-center space-x-8 p-4 text-white" href="">
+                                            <img class=" w-7 h-7" src="../src/assets/images/s4.svg" alt="">
+                                            <p class="menuItem">Tranfer</p>
+                                        </a>
+                                    </li>
+                                    <li class="hover:bg-[#6B788E] -mx-4 duration-300">
+                                        <a class=" flex items-center space-x-8 p-4 text-white" href="">
+                                            <img class=" w-7 h-7" src="../src/assets/images/s5.svg" alt="">
+                                            <p class="menuItem">Expenses</p>
+                                        </a>
+                                    </li>
+                                    <li class="hover:bg-[#6B788E] -mx-4 duration-300">
+                                        <a class=" flex items-center space-x-8 p-4 text-white" href="">
+                                            <img class=" w-7 h-7" src="../src/assets/images/s6.svg" alt="">
+                                            <p class="menuItem">Quotations</p>
+                                        </a>
+                                    </li>
+                                    <li class="hover:bg-[#6B788E] -mx-4 duration-300">
+                                        <a class=" flex items-center space-x-8 p-4 text-white" href="">
+                                            <img class=" w-7 h-7" src="../src/assets/images/s7.svg" alt="">
+                                            <p class="menuItem">Purchases</p>
+                                        </a>
+                                    </li>
+                                    <li class="hover:bg-[#6B788E] -mx-4 duration-300">
+                                        <a class=" flex items-center space-x-8 p-4 text-white" href="">
+                                            <img class=" w-7 h-7" src="../src/assets/images/s8.svg" alt="">
+                                            <p class="menuItem">Sales</p>
+                                        </a>
+                                    </li>
+                                    <li class="hover:bg-[#6B788E] -mx-4 duration-300">
+                                        <a class=" flex items-center space-x-8 p-4 text-white" href="">
+                                            <img class=" w-7 h-7" src="../src/assets/images/s9.svg" alt="">
+                                            <p class="menuItem">Sales Return</p>
+                                        </a>
+                                    </li>
+                                    <li class="hover:bg-[#6B788E] -mx-4 duration-300">
+                                        <a class=" flex items-center space-x-8 p-4 text-white" href="">
+                                            <img class=" w-7 h-7" src="../src/assets/images/s10.svg" alt="">
+                                            <p class="menuItem">Purchases Return</p>
+                                        </a>
+                                    </li>
+                                    <li class="hover:bg-[#6B788E] -mx-4 duration-300">
+                                        <a class=" flex items-center space-x-8 p-4 text-white" href="">
+                                            <img class=" w-7 h-7" src="../src/assets/images/s11.svg" alt="">
+                                            <p class="menuItem">People</p>
+                                        </a>
+                                    </li>
+                                    <li class="hover:bg-[#6B788E] -mx-4 duration-300">
+                                        <a class=" flex items-center space-x-8 p-4 text-white" href="">
+                                            <img class=" w-7 h-7" src="../src/assets/images/s12.svg" alt="">
+                                            <p class="menuItem">Setting</p>
+                                        </a>
+                                    </li>
+                                    <li class="hover:bg-[#6B788E] -mx-4 duration-300">
+                                        <a class=" flex items-center space-x-8 p-4 text-white" href="">
+                                            <img class=" w-7 h-7" src="../src/assets/images/s13.svg" alt="">
+                                            <p class="menuItem">Reports</p>
+                                        </a>
+                                    </li>
+                                    <li class="hover:bg-[#6B788E] -mx-4 duration-300">
+                                        <a class=" flex items-center space-x-8 p-4 text-white" href="">
+                                            <img class=" w-7 h-7" src="../src/assets/images/s14.svg" alt="">
+                                            <p class="menuItem">Doc</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-4/5 px-4 right duration-500">
+                        <div>
+                            <div class="row py-5 border-b">
+                                <div class="w-1/2 px-2 flex items-center">
+                                    <div class="flex items-center space-x-4">
+                                        <p class=" text-2xl">Product List</p>
+                                        <p>Product</p>
+                                        <p>Product List</p>
+                                    </div>
+                                </div>
+                                <div class="w-1/2 px-4 flex items-center justify-end">
+                                    <div>
+                                        <select class=" outline-none rounded-md p-2 bg-transparent shadow-lg" name="" id="">
+                                            <option value="">12 May 2022 To 22 Aug 2023</option>
+                                            <option value="">12 May 2022 To 22 Aug 2023</option>
+                                            <option value="">12 May 2022 To 22 Aug 2023</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="row pt-11">
+                                <div class="w-1/2 px-2">
+                                    <div>
+                                        <input class=" outline-none border w-96 h-10 px-4 rounded-md" placeholder="Search" type="search" name="" id="">
+                                    </div>
+                                </div>
+                                <div class="w-1/2 px-2">
+                                    <div class="flex items-center justify-end space-x-7">
+                                        <div>
+                                            <button class=" flex items-center space-x-2 border px-4 py-2 border-[#F8256D] rounded-md">
+                                                <i class="fa fa-filter text-[#F8256D]" aria-hidden="true"></i>
+                                                <p class="uppercase">Filter</p>
+                                            </button>
+                                        </div>
+                                        <div>
+                                            <button class=" flex items-center space-x-2 border px-9 py-2 border-[#00B0FF] rounded-md">
+                                                <p class="uppercase">Pdf</p>
+                                            </button>
+                                        </div>
+                                        <div>
+                                            <button class=" flex items-center space-x-2 border px-6 py-2 border-[#00B0FF] rounded-md">
+                                                <p class="uppercase">Excel</p>
+                                            </button>
+                                        </div>
+                                        <div>
+                                            <button class=" flex items-center space-x-2 border px-6 py-2 bg-[#6B2CFA] rounded-md">
+                                                <p class="uppercase text-white">Create</p>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row pt-10 pb-12">
+                                <div class="w-full px-2">
+                                    <div class="relative overflow-x-auto shadow-md">
+                                        <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                                            <thead class="text-xs text-gray-700 uppercase bg-[#C4C4C4] dark:bg-gray-700 dark:text-gray-400">
+                                                <tr>
+                                                    <th scope="col" class="p-4">
+                                                        <div class="flex items-center">
+                                                            <input id="checkbox-all" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                                            <label for="checkbox-all" class="sr-only">checkbox</label>
+                                                        </div>
+                                                    </th>
+                                                    <th scope="col" class="px-6 py-3 border">
+                                                        Image
+                                                    </th>
+                                                    <th scope="col" class="px-6 py-3 border">
+                                                        Name
+                                                    </th>
+                                                    <th scope="col" class="px-6 py-3 border">
+                                                        Code
+                                                    </th>
+                                                    <th scope="col" class="px-6 py-3 border">
+                                                        Category
+                                                    </th>
+                                                    <th scope="col" class="px-6 py-3 border">
+                                                        Brand
+                                                    </th>
+                                                    <th scope="col" class="px-6 py-3 border">
+                                                        Purchase Price
+                                                    </th>
+                                                    <th scope="col" class="px-6 py-3 border">
+                                                        Unit
+                                                    </th>
+                                                    <th scope="col" class="px-6 py-3 border">
+                                                        Quantity
+                                                    </th>
+                                                    <th scope="col" class="px-6 py-3 border">
+                                                        Actions
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class=" border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                                    <td class="w-4 p-4 border bg-[#C4C4C4]">
+                                                        <div class="flex items-center">
+                                                            <input id="checkbox-table-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                                            <label for="checkbox-table-1" class="sr-only">checkbox</label>
+                                                        </div>
+                                                    </td>
+                                                    <th scope="row" class="px-6 py-3 border font-medium dark:text-white whitespace-nowrap">
+                                                        fuigwjhwsbvc.jpg"
+                                                    </th>
+                                                    <td class="px-6 py-3 border">
+                                                        Trent Sauer
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        68979843
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        Green LLC
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        Bohm-Volkman
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        37.00
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        Kilogram
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        100
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        <button class="w-9 h-9 bg-red-500 rounded-md flex items-center justify-center">
+                                                            <i class="fa fa-cog text-white" aria-hidden="true"></i>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr class=" border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                                    <td class="w-4 p-4 border bg-[#C4C4C4]">
+                                                        <div class="flex items-center">
+                                                            <input id="checkbox-table-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                                            <label for="checkbox-table-1" class="sr-only">checkbox</label>
+                                                        </div>
+                                                    </td>
+                                                    <th scope="row" class="px-6 py-3 border font-medium dark:text-white whitespace-nowrap">
+                                                        fuigwjhwsbvc.jpg"
+                                                    </th>
+                                                    <td class="px-6 py-3 border">
+                                                        Trent Sauer
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        68979843
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        Green LLC
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        Bohm-Volkman
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        37.00
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        Kilogram
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        100
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        <button class="w-9 h-9 bg-red-500 rounded-md flex items-center justify-center">
+                                                            <i class="fa fa-cog text-white" aria-hidden="true"></i>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr class=" border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                                    <td class="w-4 p-4 border bg-[#C4C4C4]">
+                                                        <div class="flex items-center">
+                                                            <input id="checkbox-table-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                                            <label for="checkbox-table-1" class="sr-only">checkbox</label>
+                                                        </div>
+                                                    </td>
+                                                    <th scope="row" class="px-6 py-3 border font-medium dark:text-white whitespace-nowrap">
+                                                        fuigwjhwsbvc.jpg"
+                                                    </th>
+                                                    <td class="px-6 py-3 border">
+                                                        Trent Sauer
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        68979843
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        Green LLC
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        Bohm-Volkman
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        37.00
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        Kilogram
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        100
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        <button class="w-9 h-9 bg-red-500 rounded-md flex items-center justify-center">
+                                                            <i class="fa fa-cog text-white" aria-hidden="true"></i>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr class=" border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                                    <td class="w-4 p-4 border bg-[#C4C4C4]">
+                                                        <div class="flex items-center">
+                                                            <input id="checkbox-table-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                                            <label for="checkbox-table-1" class="sr-only">checkbox</label>
+                                                        </div>
+                                                    </td>
+                                                    <th scope="row" class="px-6 py-3 border font-medium dark:text-white whitespace-nowrap">
+                                                        fuigwjhwsbvc.jpg"
+                                                    </th>
+                                                    <td class="px-6 py-3 border">
+                                                        Trent Sauer
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        68979843
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        Green LLC
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        Bohm-Volkman
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        37.00
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        Kilogram
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        100
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        <button class="w-9 h-9 bg-red-500 rounded-md flex items-center justify-center">
+                                                            <i class="fa fa-cog text-white" aria-hidden="true"></i>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr class=" border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                                    <td class="w-4 p-4 border bg-[#C4C4C4]">
+                                                        <div class="flex items-center">
+                                                            <input id="checkbox-table-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                                            <label for="checkbox-table-1" class="sr-only">checkbox</label>
+                                                        </div>
+                                                    </td>
+                                                    <th scope="row" class="px-6 py-3 border font-medium dark:text-white whitespace-nowrap">
+                                                        fuigwjhwsbvc.jpg"
+                                                    </th>
+                                                    <td class="px-6 py-3 border">
+                                                        Trent Sauer
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        68979843
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        Green LLC
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        Bohm-Volkman
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        37.00
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        Kilogram
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        100
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        <button class="w-9 h-9 bg-red-500 rounded-md flex items-center justify-center">
+                                                            <i class="fa fa-cog text-white" aria-hidden="true"></i>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr class=" border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                                    <td class="w-4 p-4 border bg-[#C4C4C4]">
+                                                        <div class="flex items-center">
+                                                            <input id="checkbox-table-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                                            <label for="checkbox-table-1" class="sr-only">checkbox</label>
+                                                        </div>
+                                                    </td>
+                                                    <th scope="row" class="px-6 py-3 border font-medium dark:text-white whitespace-nowrap">
+                                                        fuigwjhwsbvc.jpg"
+                                                    </th>
+                                                    <td class="px-6 py-3 border">
+                                                        Trent Sauer
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        68979843
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        Green LLC
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        Bohm-Volkman
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        37.00
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        Kilogram
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        100
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        <button class="w-9 h-9 bg-red-500 rounded-md flex items-center justify-center">
+                                                            <i class="fa fa-cog text-white" aria-hidden="true"></i>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr class=" border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                                    <td class="w-4 p-4 border bg-[#C4C4C4]">
+                                                        <div class="flex items-center">
+                                                            <input id="checkbox-table-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                                            <label for="checkbox-table-1" class="sr-only">checkbox</label>
+                                                        </div>
+                                                    </td>
+                                                    <th scope="row" class="px-6 py-3 border font-medium dark:text-white whitespace-nowrap">
+                                                        fuigwjhwsbvc.jpg"
+                                                    </th>
+                                                    <td class="px-6 py-3 border">
+                                                        Trent Sauer
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        68979843
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        Green LLC
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        Bohm-Volkman
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        37.00
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        Kilogram
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        100
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        <button class="w-9 h-9 bg-red-500 rounded-md flex items-center justify-center">
+                                                            <i class="fa fa-cog text-white" aria-hidden="true"></i>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr class=" border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                                    <td class="w-4 p-4 border bg-[#C4C4C4]">
+                                                        <div class="flex items-center">
+                                                            <input id="checkbox-table-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                                            <label for="checkbox-table-1" class="sr-only">checkbox</label>
+                                                        </div>
+                                                    </td>
+                                                    <th scope="row" class="px-6 py-3 border font-medium dark:text-white whitespace-nowrap">
+                                                        fuigwjhwsbvc.jpg"
+                                                    </th>
+                                                    <td class="px-6 py-3 border">
+                                                        Trent Sauer
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        68979843
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        Green LLC
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        Bohm-Volkman
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        37.00
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        Kilogram
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        100
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        <button class="w-9 h-9 bg-red-500 rounded-md flex items-center justify-center">
+                                                            <i class="fa fa-cog text-white" aria-hidden="true"></i>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr class=" border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                                    <td class="w-4 p-4 border bg-[#C4C4C4]">
+                                                        <div class="flex items-center">
+                                                            <input id="checkbox-table-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                                            <label for="checkbox-table-1" class="sr-only">checkbox</label>
+                                                        </div>
+                                                    </td>
+                                                    <th scope="row" class="px-6 py-3 border font-medium dark:text-white whitespace-nowrap">
+                                                        fuigwjhwsbvc.jpg"
+                                                    </th>
+                                                    <td class="px-6 py-3 border">
+                                                        Trent Sauer
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        68979843
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        Green LLC
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        Bohm-Volkman
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        37.00
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        Kilogram
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        100
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        <button class="w-9 h-9 bg-red-500 rounded-md flex items-center justify-center">
+                                                            <i class="fa fa-cog text-white" aria-hidden="true"></i>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr class=" border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                                    <td class="w-4 p-4 border bg-[#C4C4C4]">
+                                                        <div class="flex items-center">
+                                                            <input id="checkbox-table-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                                            <label for="checkbox-table-1" class="sr-only">checkbox</label>
+                                                        </div>
+                                                    </td>
+                                                    <th scope="row" class="px-6 py-3 border font-medium dark:text-white whitespace-nowrap">
+                                                        fuigwjhwsbvc.jpg"
+                                                    </th>
+                                                    <td class="px-6 py-3 border">
+                                                        Trent Sauer
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        68979843
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        Green LLC
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        Bohm-Volkman
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        37.00
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        Kilogram
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        100
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        <button class="w-9 h-9 bg-red-500 rounded-md flex items-center justify-center">
+                                                            <i class="fa fa-cog text-white" aria-hidden="true"></i>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr class=" border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                                    <td class="w-4 p-4 border bg-[#C4C4C4]">
+                                                        <div class="flex items-center">
+                                                            <input id="checkbox-table-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                                            <label for="checkbox-table-1" class="sr-only">checkbox</label>
+                                                        </div>
+                                                    </td>
+                                                    <th scope="row" class="px-6 py-3 border font-medium dark:text-white whitespace-nowrap">
+                                                        fuigwjhwsbvc.jpg"
+                                                    </th>
+                                                    <td class="px-6 py-3 border">
+                                                        Trent Sauer
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        68979843
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        Green LLC
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        Bohm-Volkman
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        37.00
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        Kilogram
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        100
+                                                    </td>
+                                                    <td class="px-6 py-3 border">
+                                                        <button class="w-9 h-9 bg-red-500 rounded-md flex items-center justify-center">
+                                                            <i class="fa fa-cog text-white" aria-hidden="true"></i>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div>
+                                            <div class="row py-3 bg-[#C4C4C4] text-[#5C6468]">
+                                                <div class="w-1/2 px-4">
+                                                    <div class="flex items-center space-x-1 ">
+                                                        <p class="">Row Per Page :</p>
+                                                        <select class=" outline-none rounded-md p-1" name="" id="">
+                                                            <option value="">10</option>
+                                                            <option value="">9</option>
+                                                            <option value="">8</option>
+                                                            <option value="">7</option>
+                                                            <option value="">6</option>
+                                                            <option value="">5</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="w-1/2 px-4">
+                                                    <div class="flex items-center justify-end space-x-2.5">
+                                                        <i class="fa fa-angle-double-left" aria-hidden="true"></i>
+                                                        <p>Previous</p>
+                                                        <a href="" class="w-8 h-8 bg-[#501CD8] text-white rounded-md flex items-center justify-center">
+                                                            <p>1</p>
+                                                        </a>
+                                                        <a href="" class="w-8 h-8 bg-white text-gray-400 rounded-md flex items-center justify-center">
+                                                            <p>2</p>
+                                                        </a>
+                                                        <a href="" class="w-8 h-8 bg-white text-gray-400 rounded-md flex items-center justify-center">
+                                                            <p>3</p>
+                                                        </a>
+                                                        <a href="" class="w-8 h-8 bg-white text-gray-400 rounded-md flex items-center justify-center">
+                                                            <p>4</p>
+                                                        </a>
+                                                        <p>Next</p>
+                                                        <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="row">
+                                    <div class="w-full px-2 pt-9">
+                                        <div class=" bg-[#F6F8FA] p-4 rounded-t-md">
+                                            <p class=" text-lg font-semibold border-b pb-2 border-gray-300"><span class=" text-[#501CD8]">Oeventery</span> - Ultimate Inventory With POS</p>
+                                            <div class="flex items-center space-x-6 pt-7">
+                                                <img src="../src/assets/images/Icon.svg" alt="">
+                                                <p>© 2021 Developed by <span class="text-[#501CD8] underline"><a href="">Oeventery</a></span> All rights reserved - v3.5.0</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- Banner End -->
+
+    <script>
+        let right = document.querySelector('.right')
+        let left = document.querySelector('.left')
+        let menu = document.querySelector('.menu')
+        let menuItem = document.querySelectorAll('.menuItem')
+        let logoText = document.querySelector('.logoText')
+        let lNav = document.querySelector('.lNav')
+        let rNav = document.querySelector('.rNav')
+        menu.addEventListener('click', function(){
+            left.classList.toggle('w-1/5')
+            left.classList.toggle('w-[4%]')
+            right.classList.toggle('w-4/5');
+            right.classList.toggle('w-[96%]');
+            lNav.classList.toggle('w-1/5')
+            lNav.classList.toggle('w-[4%]')
+            rNav.classList.toggle('w-4/5');
+            rNav.classList.toggle('w-[96%]');
+            logoText.classList.toggle('opacity-0')
+        })
+    </script>
+</body>
+</html>

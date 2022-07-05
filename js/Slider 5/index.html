@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="tailwind.css">
+</head>
+<body>
+   <div>
+       <div class="mx-auto">
+           <div class="row">
+               <div class="w-full px-4">
+                   <div class="flex justify-center bg-red-50">
+                    <button class="prev">previous</button>
+                    <div class="w-96 h-96 overflow-hidden rounded-md">
+                        <div class="flex items-center  min-w-full mainSlider relative left-0 duration-1000">
+                            <div class="slider min-w-full">
+                                <img class="w-full" src="./image/rabbi.jpg" alt="">
+                            </div>
+                            <div class="slider min-w-full">
+                                <img class="w-full" src="./image/Rana.jpg" alt="">
+                            </div>
+                            <div class="slider min-w-full">
+                                <img class="w-full" src="./image/zahid.jpg" alt="">
+                            </div>
+                            <div class="slider min-w-full">
+                                <img class="w-full" src="./image/shihab.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <button class="next">next</button>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </div>
+</body>
+<script>
+    let slider = document.querySelector('.mainSlider');
+    let sliders = document.querySelectorAll('.slider');
+    let next = document.querySelector('.next')
+    let prev = document.querySelector('.prev');
+    let count = 0;
+
+    next.addEventListener('click', function(){
+        count++;
+        if(count >= sliders.length){
+            count = 0
+        }
+        slider.style.left = -count*100 + '%'
+    })
+    prev.addEventListener('click', function(){
+        count--;
+        if(count < 0){
+            count = sliders.length - 1;
+        }
+        slider.style.left = -count*100 + '%'
+    })
+</script>
+</html>

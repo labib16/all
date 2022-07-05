@@ -1,0 +1,16 @@
+.logo{
+    width: 50px;
+}
+.list{
+    
+    list-style: none;
+}
+.t-none{
+    text-decoration: none;
+}
+.color-g{
+    color: gray;
+}
+.anker:hover{
+    color: black;
+}

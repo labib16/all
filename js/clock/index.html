@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            display: flex;
+            justify-content: center;
+        }
+        .main p{
+            color: green;
+            font-size: 80px;
+        }
+    </style>
+</head>
+<body>
+   <div class="main">
+    <p class="" id="display"></p>
+   </div>
+
+    <script>
+        function ShowClock(){
+            let date = new Date();
+            let hour = date.getHours();
+            let minutes = date.getMinutes();
+            let seconds = date.getSeconds();
+            let seasons = 'AM';
+            if(hour == 0){
+                hour = 12;
+            }
+            if(hour > 12){
+                hour = hour -1,
+                seasons = 'PM'
+            };
+
+            hour = ( hour < 10) ? '0' + hour : hour;
+            minutes = (minutes < 10) ? '0' + minutes : minutes;
+            seconds = (seconds < 10) ? '0' + seconds : seconds;
+
+            let clock = hour + ':' + minutes + ':' + seconds + " " + seasons;
+
+            let screen = document.getElementById('display');
+            screen.innerText = clock
+            setTimeout(ShowClock, 1000);
+        }
+        ShowClock()
+    </script>
+    <script src="oop.js"></script>
+</body>
+</html>

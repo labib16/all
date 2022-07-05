@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.containers{
+    @apply container mx-auto px-4;
+}
+.row{
+    @apply flex flex-wrap -mx-4;
+}

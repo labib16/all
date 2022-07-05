@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="tailwind.css">
+</head>
+<body>
+    <div>
+        <div class="container mx-auto px-4">
+            
+            <div class="flex justify-center">
+                <div style="width: 800px; height: 800px;" class=" overflow-hidden">
+                    <div class="flex  relative parent left-0 duration-500">
+                        <div class="min-w-full img">
+                         <img class="w-full" src="./image/car1.svg" alt="">
+                         <p class="text-center">Car 1</p>
+                        </div>
+                        <div class="min-w-full img">
+                         <img class="w-full" src="./image/car2.svg" alt="">
+                         <p class="text-center">Car 2</p>
+                        </div>
+                        <div class="min-w-full img">
+                         <img class="w-full" src="./image/car3.svg" alt="">
+                         <p class="text-center">Car 3</p>
+                        </div>
+                    </div>
+                    <button class="absolute top-60 left-0 bg-green-400 text-white px-4 py-2 rounded-md prev" type="">Previous</button>
+                    <button class="absolute top-60 right-0 bg-green-400 text-white px-4 py-2 rounded-md next" type="">Next</button>
+                </div>
+            </div>
+            <ul class="flex items-center justify-center space-x-3 transform -translate-y-44">
+             <li class="p-2 duration-500 bg-red-500 rounded-full h-10 w-10  flex items-center justify-center cursor-pointer nmbr">1</li>
+             <li class="p-2 duration-500 rounded-full h-10 w-10 flex items-center justify-center cursor-pointer nmbr">2</li>
+             <li class="p-2 duration-500 rounded-full h-10 w-10 flex items-center justify-center cursor-pointer nmbr">3</li>
+         </ul>
+        </div>
+    </div>
+  <script>
+      let nextBtn = document.querySelector('.next');
+      let prevBtn = document.querySelector('.prev');
+      let parentDiv = document.querySelector('.parent'); 
+      let image = document.querySelectorAll('.img');
+      let nmbr = document.querySelectorAll('.nmbr')
+      let count = 0;
+
+      nextBtn.addEventListener('click', function(){
+            count++;
+            if(count > image.length - 1){
+                count = 0
+            }
+            nmbr[count].classList.add('bg-red-500')
+            if( count == 0){
+                nmbr[1].classList.remove('bg-red-500');
+                nmbr[2].classList.remove('bg-red-500');
+            }
+            if( count == 1){
+                nmbr[0].classList.remove('bg-red-500');
+                nmbr[2].classList.remove('bg-red-500');
+            }
+            if( count == 2){
+                nmbr[1].classList.remove('bg-red-500');
+                nmbr[0].classList.remove('bg-red-500');
+            }
+            parentDiv.style.left = -count*100 + '%'
+      })
+      prevBtn.addEventListener('click', function(){
+            count--;
+            if(count < 0){
+                count = image.length -1
+            }
+            nmbr[count].classList.add('bg-red-500')
+            if( count == 0){
+                nmbr[1].classList.remove('bg-red-500');
+                nmbr[2].classList.remove('bg-red-500');
+            }
+            if( count == 1){
+                nmbr[0].classList.remove('bg-red-500');
+                nmbr[2].classList.remove('bg-red-500');
+            }
+            if( count == 2){
+                nmbr[1].classList.remove('bg-red-500');
+                nmbr[0].classList.remove('bg-red-500');
+            }
+            parentDiv.style.left = -count*100 + '%'
+      })
+  </script>
+</body>
+</html>

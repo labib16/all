@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="container mx-auto px-4 cursor-pointer">
+        <div class="w-full border head p-4">
+            tab 1
+        </div>
+        <p class="border-b border-l border-r p-4 body hidden">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam modi recusandae quis laudantium officia molestias. Nemo, quibusdam quo pariatur delectus incidunt aliquam assumenda obcaecati. Dignissimos, reprehenderit! Natus maxime molestiae architecto dolorem quos. Alias ut praesentium voluptate iusto. Ex, architecto corrupti?</p>
+        <div class="w-full border head p-4">
+            tab 2
+        </div>
+        <p class="border-b border-l border-r p-4 body hidden">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam modi recusandae quis laudantium officia molestias. Nemo, quibusdam quo pariatur delectus incidunt aliquam assumenda obcaecati. Dignissimos, reprehenderit! Natus maxime molestiae architecto dolorem quos. Alias ut praesentium voluptate iusto. Ex, architecto corrupti?</p>
+        <div class="w-full border head p-4">
+            tab 2
+        </div>
+        <p class="border-b border-l border-r p-4 body hidden">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam modi recusandae quis laudantium officia molestias. Nemo, quibusdam quo pariatur delectus incidunt aliquam assumenda obcaecati. Dignissimos, reprehenderit! Natus maxime molestiae architecto dolorem quos. Alias ut praesentium voluptate iusto. Ex, architecto corrupti?</p>
+    </div>
+
+ <script>
+     let head = document.querySelectorAll('.head');
+     let body = document.querySelectorAll('.body');
+     head.forEach(function(x,y){
+         x.addEventListener('click', function(){
+             body[y].classList.toggle('hidden')
+         })
+     })
+ </script>
+</body>
+</html>

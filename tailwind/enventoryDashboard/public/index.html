@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../dist/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+</head>
+<body style="font-family: 'Poppins', sans-serif">
+    <!-- Navbar -->
+        <div class=" shadow-lg">
+            <div class="mx-auto px-4">
+                <div class="row">
+                    <div class="w-1/5 lNav flex items-center duration-500 z-0">
+                        <div class="flex items-center space-x-3">
+                            <img src="../src/assets/images/Icon.svg" alt="">
+                            <p class=" text-3xl font-semibold logoText duration-500">enventory</p>
+                        </div>
+                    </div>
+                    <div class="w-4/5 rNav px-4 flex items-center justify-between duration-500 z-50">
+                        <div>
+                            <img class=" cursor-pointer menu" src="../src/assets/images/menu.svg" alt="">
+                        </div>
+                        <div class="flex items-center justify-end space-x-10">
+                            <div>
+                                <button class=" bg-[#501CD8] text-white px-8 rounded-full">POS</button>
+                            </div>
+                            <div>
+                            <select class="px-5 outline-none py-1 bg-transparent border border-black rounded-full" name="" id="">
+                                <option value="Warehouse">Warehouse</option>
+                                <option value="Warehouse">Warehouse 1</option>
+                                <option value="Warehouse">Warehouse 2</option>
+                            </select>
+                            </div>
+                            <div>
+                            <select class=" py-2 px-2 rounded-md bg-transparent outline-none" name="countries">
+                                <option value="NL">🇳🇱</option>
+                                <option value="DE">🇩🇪</option>
+                                <option value="FR">🇫🇷</option>
+                                <option value="ES">🇪🇸</option>
+                            </select>
+                            </div>
+                            <div class=" relative">
+                                <img src="../src/assets/images/bell.svg" alt="">
+                                <div class=" w-5 h-5 absolute -top-1 transform translate-x-4 bg-red-500 rounded-full text-white flex items-center justify-center">
+                                    <p>2</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <img src="../src/assets/images/user.svg" class=" rounded-full" alt="">
+                                <div>
+                                <select class=" outline-none bg-transparent text-lg font-semibold" name="" id="">
+                                    <option value="">Stephan Austin</option>
+                                    <option value="">Stephan Austin</option>
+                                    <option value="">Stephan Austin</option>
+                                </select>
+                                <p class=" text-sm ml-1">Chief Manager</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- Navbar -->
+    <!-- Banner Start -->
+        <div>
+            <div class="mx-auto">
+                <div class="row">
+                    <div class="w-1/5 bg-[#262F3C] left duration-500">
+                        <div class="px-4">
+                            <div>
+                                <ul>
+                                    <li class="hover:bg-[#6B788E] -mx-4 duration-300">
+                                        <a class=" flex items-center space-x-8 p-4 text-white" href="index.html">
+                                            <img class=" w-7 h-7" src="../src/assets/images/s1.svg" alt="">
+                                            <p class="menuItem">Dashboard</p>
+                                        </a>
+                                    </li>
+                                    <li class="hover:bg-[#6B788E] -mx-4 duration-300">
+                                        <a class=" flex items-center space-x-8 p-4 text-white" href="product.html">
+                                            <img class=" w-7 h-7" src="../src/assets/images/s2.svg" alt="">
+                                            <p class="menuItem">Products</p>
+                                        </a>
+                                    </li>
+                                    <li class="hover:bg-[#6B788E] -mx-4 duration-300">
+                                        <a class=" flex items-center space-x-8 p-4 text-white" href="">
+                                            <img class=" w-7 h-7" src="../src/assets/images/s3.svg" alt="">
+                                            <p class="menuItem">Adjustment</p>
+                                        </a>
+                                    </li>
+                                    <li class="hover:bg-[#6B788E] -mx-4 duration-300">
+                                        <a class=" flex items-center space-x-8 p-4 text-white" href="">
+                                            <img class=" w-7 h-7" src="../src/assets/images/s4.svg" alt="">
+                                            <p class="menuItem">Tranfer</p>
+                                        </a>
+                                    </li>
+                                    <li class="hover:bg-[#6B788E] -mx-4 duration-300">
+                                        <a class=" flex items-center space-x-8 p-4 text-white" href="">
+                                            <img class=" w-7 h-7" src="../src/assets/images/s5.svg" alt="">
+                                            <p class="menuItem">Expenses</p>
+                                        </a>
+                                    </li>
+                                    <li class="hover:bg-[#6B788E] -mx-4 duration-300">
+                                        <a class=" flex items-center space-x-8 p-4 text-white" href="">
+                                            <img class=" w-7 h-7" src="../src/assets/images/s6.svg" alt="">
+                                            <p class="menuItem">Quotations</p>
+                                        </a>
+                                    </li>
+                                    <li class="hover:bg-[#6B788E] -mx-4 duration-300">
+                                        <a class=" flex items-center space-x-8 p-4 text-white" href="">
+                                            <img class=" w-7 h-7" src="../src/assets/images/s7.svg" alt="">
+                                            <p class="menuItem">Purchases</p>
+                                        </a>
+                                    </li>
+                                    <li class="hover:bg-[#6B788E] -mx-4 duration-300">
+                                        <a class=" flex items-center space-x-8 p-4 text-white" href="">
+                                            <img class=" w-7 h-7" src="../src/assets/images/s8.svg" alt="">
+                                            <p class="menuItem">Sales</p>
+                                        </a>
+                                    </li>
+                                    <li class="hover:bg-[#6B788E] -mx-4 duration-300">
+                                        <a class=" flex items-center space-x-8 p-4 text-white" href="">
+                                            <img class=" w-7 h-7" src="../src/assets/images/s9.svg" alt="">
+                                            <p class="menuItem">Sales Return</p>
+                                        </a>
+                                    </li>
+                                    <li class="hover:bg-[#6B788E] -mx-4 duration-300">
+                                        <a class=" flex items-center space-x-8 p-4 text-white" href="">
+                                            <img class=" w-7 h-7" src="../src/assets/images/s10.svg" alt="">
+                                            <p class="menuItem">Purchases Return</p>
+                                        </a>
+                                    </li>
+                                    <li class="hover:bg-[#6B788E] -mx-4 duration-300">
+                                        <a class=" flex items-center space-x-8 p-4 text-white" href="">
+                                            <img class=" w-7 h-7" src="../src/assets/images/s11.svg" alt="">
+                                            <p class="menuItem">People</p>
+                                        </a>
+                                    </li>
+                                    <li class="hover:bg-[#6B788E] -mx-4 duration-300">
+                                        <a class=" flex items-center space-x-8 p-4 text-white" href="">
+                                            <img class=" w-7 h-7" src="../src/assets/images/s12.svg" alt="">
+                                            <p class="menuItem">Setting</p>
+                                        </a>
+                                    </li>
+                                    <li class="hover:bg-[#6B788E] -mx-4 duration-300">
+                                        <a class=" flex items-center space-x-8 p-4 text-white" href="">
+                                            <img class=" w-7 h-7" src="../src/assets/images/s13.svg" alt="">
+                                            <p class="menuItem">Reports</p>
+                                        </a>
+                                    </li>
+                                    <li class="hover:bg-[#6B788E] -mx-4 duration-300">
+                                        <a class=" flex items-center space-x-8 p-4 text-white" href="">
+                                            <img class=" w-7 h-7" src="../src/assets/images/s14.svg" alt="">
+                                            <p class="menuItem">Doc</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-4/5 px-4 right duration-500">
+                        <div>
+                            <div class="row">
+                                <div class="w-full px-2 py-5">
+                                   <div class="flex justify-between items-center">
+                                    <p class="text-2xl font-semibold">Dashboard</p>
+                                    <select class=" outline-none rounded-md p-2 bg-transparent shadow-lg" name="" id="">
+                                        <option value="">12 May 2022 To 22 Aug 2023</option>
+                                        <option value="">12 May 2022 To 22 Aug 2023</option>
+                                        <option value="">12 May 2022 To 22 Aug 2023</option>
+                                    </select>
+                                   </div>
+                                </div>
+                                <div class="lg:w-1/4 md:w-1/2 w-full px-2">
+                                    <div class=" flex items-center space-x-11 rounded-md shadow-lg p-7">
+                                        <div class="bg-[#6B2CFA] h-12 w-12 rounded-md flex items-center justify-center">
+                                            <img src="../src/assets/images/revenue.svg" alt="">
+                                        </div>
+                                        <div>
+                                            <p class=" text-2xl font-semibold">Revenue</p>
+                                            <p class=" text-lg text-gray-500 font-semibold">$1803.00</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lg:w-1/4 md:w-1/2 w-full px-2">
+                                    <div class=" flex items-center space-x-11 rounded-md shadow-lg p-7">
+                                        <div class="bg-[#00B0FF] h-12 w-12 rounded-md flex items-center justify-center">
+                                            <img src="../src/assets/images/purchase.svg" alt="">
+                                        </div>
+                                        <div>
+                                            <p class=" text-2xl font-semibold">Purchase</p>
+                                            <p class=" text-lg text-gray-500 font-semibold">$1803.00</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lg:w-1/4 md:w-1/2 w-full px-2">
+                                    <div class=" flex items-center space-x-11 rounded-md shadow-lg p-7">
+                                        <div class="bg-[#F8256D] h-12 w-12 rounded-md flex items-center justify-center">
+                                            <img src="../src/assets/images/salesreturn.svg" alt="">
+                                        </div>
+                                        <div>
+                                            <p class=" text-2xl font-semibold">Sales Return</p>
+                                            <p class=" text-lg text-gray-500 font-semibold">$1803.00</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lg:w-1/4 md:w-1/2 w-full px-2">
+                                    <div class=" flex items-center space-x-11 rounded-md shadow-lg p-7">
+                                        <div class="bg-[#2571FF] h-12 w-12 rounded-md flex items-center justify-center">
+                                            <img src="../src/assets/images/profit.svg" alt="">
+                                        </div>
+                                        <div>
+                                            <p class=" text-2xl font-semibold">Profit</p>
+                                            <p class=" text-lg text-gray-500 font-semibold">$1803.00</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <!-- Chart Start -->
+                                <div class="lg:w-2/3 w-full px-2 pt-11">
+                                    <div>
+                                        <div class="p-4 bg-white shadow-lg">
+                                            <div class="flex justify-between">
+                                                <p class=" text-lg font-bold">P. Statistics</p>
+                                                <div class="flex items-center space-x-3">
+                                                    <div class="flex items-center space-x-1">
+                                                        <p>Union Ads</p>
+                                                        <div class="w-2 h-2 bg-[#00B0FF] rounded-full">
+                                
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex items-center space-x-1">
+                                                        <p>Purchases</p>
+                                                        <div class="w-2 h-2 bg-[#6B2CFA] rounded-full">
+                                
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <button class=" bg-gray-400 h-10 w-10 rounded-md flex items-center justify-center ml-12"><img src="../src/assets/images/download.svg" alt=""></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p>Analytic data</p>
+                                            <img class="w-full" src="../src/assets/images/graph.svg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                    <div class="lg:w-1/3 w-full px-4 pt-12 flex">
+                                        <div class="p-4 bg-white rounded-md shadow-lg">
+                                            <p class=" text-xl font-bold">Top Selling Products (2022)</p>
+                                            <img class="pt-12" src="../src/assets/images/Chart2.svg" alt="">
+                                            <div class="flex space-x-2.5 justify-center pt-10">
+                                                <div class="w-7 h-1.5 bg-[#F8256D]">
+                                
+                                                </div>
+                                                <div class="w-7 h-1.5 bg-[#00B0FF]">
+                                
+                                                </div>
+                                                <div class="w-7 h-1.5 bg-[#501CD8]">
+                                
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="row">
+                                <!-- Chart Start -->
+                                <div class="lg:w-2/3 w-full px-2 pt-11">
+                                    <div>
+                                        <div class="p-4 bg-white shadow-lg bg relative">
+                                            <div class="flex justify-between">
+                                                <p class=" text-lg font-bold">P. Statistics</p>
+                                                <div class="flex items-center space-x-3">
+                                                    <div class="flex items-center space-x-1">
+                                                        <p>Union Ads</p>
+                                                        <div class="w-2 h-2 bg-[#00B0FF] rounded-full">
+                                
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex items-center space-x-1">
+                                                        <p>Purchases</p>
+                                                        <div class="w-2 h-2 bg-[#6B2CFA] rounded-full">
+                                
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <button class=" bg-gray-400 h-10 w-10 rounded-md flex items-center justify-center ml-12"><img src="../src/assets/images/download.svg" alt=""></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p>Analytic data</p>
+                                            <img class="absolute bottom-12 left-20" src="../src/assets/images/Linechart.svg" alt="">
+                                            <img class="" src="../src/assets/images/bg.svg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                    <div class="lg:w-1/3 w-full px-4 pt-12 flex">
+                                        <div class="p-4 bg-white rounded-md shadow-lg">
+                                            <p class=" text-xl font-bold">Top Selling Products (2022)</p>
+                                            <img class="pt-12" src="../src/assets/images/Chart2.svg" alt="">
+                                            <div class="flex space-x-2.5 justify-center pt-10">
+                                                <div class="w-7 h-1.5 bg-[#F8256D]">
+                                
+                                                </div>
+                                                <div class="w-7 h-1.5 bg-[#00B0FF]">
+                                
+                                                </div>
+                                                <div class="w-7 h-1.5 bg-[#501CD8]">
+                                
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                             <!-- Chart End -->
+                             <div class="row">
+                                <div class="w-full px-2 pt-12">
+                                    <div class=" bg-[#F6F8FA] p-4 rounded-t-md">
+                                        <p class=" text-lg font-semibold border-b pb-2 border-gray-300"><span class=" text-[#501CD8]">Oeventery</span> - Ultimate Inventory With POS</p>
+                                        <div class="flex items-center space-x-6 pt-7">
+                                            <img src="../src/assets/images/Icon.svg" alt="">
+                                            <p>© 2021 Developed by <span class="text-[#501CD8] underline"><a href="">Oeventery</a></span> All rights reserved - v3.5.0</p>
+                                        </div>
+                                    </div>
+                                </div>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- Banner End -->
+
+    <script>
+        let right = document.querySelector('.right')
+        let left = document.querySelector('.left')
+        let menu = document.querySelector('.menu')
+        let menuItem = document.querySelectorAll('.menuItem')
+        let logoText = document.querySelector('.logoText')
+        let lNav = document.querySelector('.lNav')
+        let rNav = document.querySelector('.rNav')
+        menu.addEventListener('click', function(){
+            left.classList.toggle('w-1/5')
+            left.classList.toggle('w-[4%]')
+            right.classList.toggle('w-4/5');
+            right.classList.toggle('w-[96%]');
+            lNav.classList.toggle('w-1/5')
+            lNav.classList.toggle('w-[4%]')
+            rNav.classList.toggle('w-4/5');
+            rNav.classList.toggle('w-[96%]');
+            logoText.classList.toggle('opacity-0')
+        })
+    </script>
+</body>
+</html>

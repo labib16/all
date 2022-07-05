@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .pt-300{
+            padding-top:300px;
+        }
+        .flex{
+            display: flex;
+        }
+        .h-600{
+            height: 600px;
+        }
+        .h-300{
+            height: 300px;
+        }
+        .w-100{
+            width: 100%;
+        }
+        .bg-green{
+            background-color: green;
+        }
+        .bg-blue{
+            background-color: blue;
+        }
+        .w-25{
+            width: 25%;
+        }
+        
+        .w-50{
+            width: 50%;
+        }
+        .boat{
+            width:200px;
+            height: 70px;
+            border-radius:0 0 50% 50%;
+        }
+        .relative{
+            position:relative;
+        }
+        .absolute{
+            position:absolute;
+        }
+        .slot{
+            width: 42px;
+            height: 77px;
+            float: left;
+            margin-left:5px;
+            margin-top:-76px;
+        }
+        .monk,.devil{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            cursor: pointer;
+        }
+        .monk{
+            background:yellow;
+        }
+        .devil{
+            background:violet;
+        }
+    </style>
+</head>
+<body>
+    <div class="w-100 h-600 flex pt-300" style="background-color: rgb(98, 220, 236)">
+        <div class="w-25 bg-green h-300">
+            <div class="relative slot bank"></div>
+            <div class="relative slot bank"></div>
+            <div class="relative slot bank"></div>
+            <div class="relative slot bank"></div>
+            <div class="relative slot bank"></div>
+            <div class="relative slot bank"></div>
+        </div>
+        <div class="w-50 bg-blue h-300 relative">
+            <div class="boat absolute" style="background: red; right:0; margin-right: 0; transition: all 0.3s;" data-side="right">
+                <div class="relative slot1">
+                    
+                </div>
+                <div style="right:0" class="relative slot2">
+
+                </div>
+            </div>
+        </div>
+        <div class="w-25 bg-green h-300 rMainSlot">
+                <div class="relative slot rightMonk bank">
+                    <div class="monk" data-side="right"></div>
+                </div>
+                <div class="relative slot rightMonk bank">
+                    <div class="monk" data-side="right"></div>
+                </div>
+                <div class="relative slot rightMonk bank">
+                    <div class="monk" data-side="right"></div>
+                </div>
+                <div class="relative slot rightDevil bank">
+                    <div class="devil" data-side="right"></div>
+                </div>
+                <div class="relative slot rightDevil bank">
+                    <div class="devil" data-side="right"></div>
+                </div>
+                <div class="relative slot rightDevil bank">
+                    <div class="devil" data-side="right"></div>
+                </div>
+        </div>
+    </div>
+    <a href="javascript:;" class="absolute gobtn" style="width:50px;height:50px; border-radius:50%; background:red;right:30px;top:30px; text-align: center;line-height: 50px;">GO</a>
+
+
+    <script>
+        let goButton = document.querySelector('.gobtn');
+        let rightMonk = document.querySelectorAll('.rightMonk');
+        let rightDevil = document.querySelectorAll('.rightDevil');
+        let devil = document.querySelectorAll('.devil')
+        let boat = document.querySelector('.boat')
+        let slot1 = document.querySelector('.slot1')
+        let slot2 = document.querySelector('.slot2')
+        let rMainSlot = document.querySelector('.rMainSlot')
+
+        goButton.addEventListener('click', function(){
+            boat.style.left = 0
+        })
+        rightMonk.forEach(function(ele,ind){
+            ele.addEventListener('click', function(){
+                slot1.append(rightMonk[ind])
+                if(slot1.childElementCount > 2){
+                    rMainSlot.append(rightMonk[ind])
+                    alert('limit is two')
+                }
+            })
+        })
+        rightDevil.forEach(function(ele,ind){
+            ele.addEventListener('click', function(){
+                slot2.append(rightDevil[ind])
+                if(slot2.childElementCount > 2){
+                    rMainSlot.append(rightDevil[ind])
+                    alert('limit is two')
+                }
+            })
+        })
+    </script>
+</body>
+</html>

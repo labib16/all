@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="tailwind.css">
+</head>
+<body>
+    <div>
+        <div class="container mx-auto px-4">
+            <div class="row">
+                <div class="w-full px-4">
+                    <div>
+                        <div class="flex justify-between border p-4 cursor-pointer head">
+                            <p class="">Section 1</p>
+                        </div>
+                        <p class="p-4 border h-auto hidden body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab animi asperiores cumque delectus eaque esse, facere nisi porro quaerat quam quidem repellendus saepe sit, tempora tempore temporibus totam veniam voluptatibus!</p>
+                    </div>
+                    <div>
+                        <div class="flex justify-between border p-4 cursor-pointer head">
+                            <p class="">Section 2</p>
+                        </div>
+                        <p class="p-4 border h-auto hidden body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab animi asperiores cumque delectus eaque esse, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab animi asperiores cumque delectus eaque esse, facere nisi porro quaerat quam quidem repellendus saepe sit, facere nisi porro quaerat quam quidem repellendus saepe sit, tempora tempore temporibus totam veniam voluptatibus!</p>
+                    </div>
+                    <div>
+                        <div class="flex justify-between border p-4 cursor-pointer head">
+                            <p class="">Section 3</p>
+                        </div>
+                        <p class="p-4 border h-auto hidden body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab animi asperiores cumque delectus eaque esse, facere nisi porro quaerat quam quidem repellendus saepe sit, tempora tempore temporibus totam veniam voluptatibus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab animi asperiores cumque delectus eaque esse, facere nisi porro quaerat quam quidem repellendus saepe sit,</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script !src="">
+        let accordionHead = document.querySelectorAll('.head');
+        let accordionBody = document.querySelectorAll('.body');
+
+        accordionHead.forEach(function (x,y){
+            x.addEventListener('click', function (){
+                accordionBody[y].classList.toggle('hidden');
+                if (y == 0){
+                    accordionBody[1].classList.add('hidden');
+                    accordionBody[2].classList.add('hidden');
+                };
+                if (y == 1){
+                    accordionBody[0].classList.add('hidden');
+                    accordionBody[2].classList.add('hidden');
+                };
+                if (y == 2){
+                    accordionBody[0].classList.add('hidden');
+                    accordionBody[1].classList.add('hidden');
+                };
+            })
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../dist/style.css">
+</head>
+<body>
+    <div class="w-full h-screen bg-red-500 flex justify-center items-center">
+        <p class=" text-white text-3xl">Section 1</p>
+    </div>
+    <div class="w-full h-screen bg-blue-500 flex justify-center items-center">
+        <p class=" text-white text-3xl">Section 2</p>
+    </div>
+    <div class="w-full h-screen bg-green-500 flex justify-center items-center">
+        <p class=" text-white text-3xl">Section 3</p>
+    </div>
+    <div class="w-full h-screen bg-yellow-500 flex justify-center items-center">
+        <p class=" text-white text-3xl">Section 4</p>
+    </div>
+    <button id="btn" style="top: 600px;" class="bg-lime-500 hidden px-4 py-2 rounded-full fixed  right-0">Back On Top</button>
+
+
+    <script>
+        let btn = document.getElementById('btn');
+        window.onscroll = function(){
+            scrollFunction();
+        }
+        function scrollFunction(){
+            if(document.body.scrollTo > 30 || document.documentElement.scrollTop > 30){
+                btn.classList.remove('hidden');
+            }else{
+                btn.classList.add('hidden')
+            }
+        }
+        btn.addEventListener('click', function(){
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        })
+    </script>
+</body>
+</html>

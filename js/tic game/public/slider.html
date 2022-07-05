@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../dist/style.css">
+</head>
+<body>
+    <div class="">
+        <div class="container mx-auto px-4">
+            <div class="row">
+                <div class="flex justify-center w-full h-screen items-center">
+                    <div class="px-4 space-y-0.5">
+                        <p class="text-center text-4xl font-bold pb-5 text-blue-500">Image Slider</p>
+                        <p class="text-center text-3xl font-bold pb-5 text-blue-400">Using Javascript</p>
+                        <div class="flex items-center">
+                            <button class="bg-orange-500 text-white px-6 py-2 rounded-md" id="previous">Previous</button>
+                            <img width="500" height="550" src="../image/rabbi.jpg" alt="">
+                            <button class="bg-orange-500 text-white px-6 py-2 rounded-md" id="next">Next</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        class slider{
+            constructor(option){
+                this.option = {};
+                this.option.images = option.images ? option.images : ['../image/rabbi.jpg','../image/Rana.jpg','../image/shihab.jpg','../image/zahid.jpg','../image/tas.jpg'];
+                this.option.prevBtn = option.prevBtn ? option.prevBtn : 'previous';
+                this.option.nextBtn = option.nextBtn ? option.nextBtn : 'next';
+                this.option.imgTag = option.imgTag ? option.imgTag : 'img'
+                this.option.count = option.count ? option.count : 0;
+                this.initialization();
+            }
+            initialization(){
+                let images = this.option.images;
+                let prevBtn = document.getElementById(this.option.prevBtn);
+                let nextBtn = document.getElementById(this.option.nextBtn);
+                let count = this.option.count;
+                let imgTag = document.querySelector(this.option.imgTag)
+                
+                nextBtn.addEventListener('click', function(){
+                    count++;
+                    if(count >=  4){
+                        count = 0;
+                        imgTag.src = images[count];
+                    }else{
+                        imgTag.src = images[count];
+                    }
+                })
+                prevBtn.addEventListener('click', ()=>{
+                    count--;
+                    if(count < 0){
+                        count = 4
+                        imgTag.src = images[count];
+                    }else{
+                        imgTag.src = images[count];
+                    }
+                })
+                
+            }
+        }
+
+        let imageSlider = new slider({});
+    </script>
+</body>
+</html>
